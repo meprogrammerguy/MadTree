@@ -8,15 +8,24 @@ namespace MadTree
 {
     class Tree
     {
-        public Node root;
+        #region Properties
+        public Node root
+        {
+            get;
+            set;
+        }
+        #endregion Properties
+        #region Public
         public Tree()
         {
             root = null;
         }
+
         public Node ReturnRoot()
         {
             return root;
         }
+
         public void Insert(int id)
         {
             Node newNode = new Node();
@@ -51,6 +60,7 @@ namespace MadTree
                 }
             }
         }
+
         public void Preorder(Node Root)
         {
             if (Root != null)
@@ -60,6 +70,7 @@ namespace MadTree
                 Preorder(Root.TeamB);
             }
         }
+
         public void Inorder(Node Root)
         {
             if (Root != null)
@@ -69,6 +80,7 @@ namespace MadTree
                 Inorder(Root.TeamB);
             }
         }
+
         public void Postorder(Node Root)
         {
             if (Root != null)
@@ -78,5 +90,6 @@ namespace MadTree
                 Root.Display();
             }
         }
+        #endregion Public
     }
 }
